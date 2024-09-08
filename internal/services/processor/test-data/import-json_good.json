@@ -1,0 +1,113 @@
+{
+ "type": "saved_messages",
+ "id": 123456789,
+ "messages": [
+  {
+   "id": 82398,
+   "type": "message",
+   "date": "2021-02-02T09:31:03",
+   "date_unixtime": "1612254663",
+   "from": "И",
+   "from_id": "user123456789",
+   "forwarded_from": "Name",
+   "saved_from": "Chatname",
+   "file": "(File not included. Change data exporting settings to download.)",
+   "file_name": "HW.pdf",
+   "thumbnail": "(File not included. Change data exporting settings to download.)",
+   "mime_type": "application/pdf",
+   "text": "And this is text",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "And this is text"
+    }
+   ]
+  },
+  {
+   "id": 82399,
+   "type": "message",
+   "date": "2021-02-02T09:31:03",
+   "date_unixtime": "1612254663",
+   "from": "И",
+   "from_id": "user123456789",
+   "forwarded_from": "Name",
+   "saved_from": "Chat",
+   "file": "(File not included. Change data exporting settings to download.)",
+   "file_name": "materials 23.11.pdf",
+   "thumbnail": "(File not included. Change data exporting settings to download.)",
+   "mime_type": "application/pdf",
+   "text": "",
+   "text_entities": []
+  },
+  {
+   "id": 82438,
+   "type": "message",
+   "date": "2021-02-02T09:31:03",
+   "date_unixtime": "1612254663",
+   "from": "ИИ",
+   "from_id": "user123488",
+   "forwarded_from": "VVVVV",
+   "saved_from": "Chatchat",
+   "file": "(File not included. Change data exporting settings to download.)",
+   "file_name": "HW 13.01.pdf",
+   "thumbnail": "(File not included. Change data exporting settings to download.)",
+   "mime_type": "application/pdf",
+   "text": [
+    "Homework: WB 13.01 +  Online exercises:\n",
+    {
+     "type": "link",
+     "text": "http://www.montsemorales.com/gramatica/Infinitive.htm"
+    },
+    "\n",
+    {
+     "type": "link",
+     "text": "https://www.ego4u.com/en/cram-up/grammar/infinitive-gerund/exercises?04"
+    },
+    "\n",
+    {
+     "type": "link",
+     "text": "https://www.ego4u.com/en/cram-up/grammar/infinitive-gerund/exercises?05"
+    },
+    "\n",
+    {
+     "type": "link",
+     "text": "http://www.carmenlu.com/first/grammar/verbs_ing1b.htm"
+    }
+   ],
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Homework: WB 13.01 +  Online exercises:\n"
+    },
+    {
+     "type": "link",
+     "text": "http://www.montsemorales.com/gramatica/Infinitive.htm"
+    },
+    {
+     "type": "plain",
+     "text": "\n"
+    },
+    {
+     "type": "link",
+     "text": "https://www.ego4u.com/en/cram-up/grammar/infinitive-gerund/exercises?04"
+    },
+    {
+     "type": "plain",
+     "text": "\n"
+    },
+    {
+     "type": "link",
+     "text": "https://www.ego4u.com/en/cram-up/grammar/infinitive-gerund/exercises?05"
+    },
+    {
+     "type": "plain",
+     "text": "\n"
+    },
+    {
+     "type": "link",
+     "text": "http://www.carmenlu.com/first/grammar/verbs_ing1b.htm"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,49 @@
+syntax="proto3";
+package api;
+
+option go_package = "telegram_processor/pkg/api/proto";
+
+import "grpc-gateway/protoc-gen-openapiv2/options/annotations.proto";
+import "google/api/annotations.proto";
+import "pkg/models/proto/messages.proto";
+
+message SearchRequest {
+  string query = 1;
+}
+message SearchResponse {
+  repeated models.MessageSearchedSimple messages = 1;
+}
+
+service TelegramProcessorService {
+  rpc Search (SearchRequest) returns (SearchResponse) {
+    option(google.api.http) = {
+      get: "/api/search",
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      description: "Search telegram messages by query";
+    };
+  }
+}
+
+option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
+  info: {
+    title: "TelegramProcessorService";
+    version: "1.0";
+  };
+  schemes: HTTP;
+  consumes: "application/json";
+  produces: "application/json";
+//  responses: {
+//    key: "404";
+//    value: {
+//      description: "Returned when the resource does not exist.";
+//      schema: {
+//        json_schema: {
+//          type: STRING;
+//        }
+//      }
+//    }
+//  }
+};
+
+

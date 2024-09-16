@@ -11,11 +11,13 @@ import (
 const SEARCH_LIMIT = 10
 
 func (s *processorApiServer) Search(ctx context.Context, in *pb.SearchRequest) (*pb.SearchResponse, error) {
-	slog.Debug("Search request", "query", in.Query)
-	var (
-		messages models.Messages
-		err      error
-	)
+	traceId, err := GetTraceIdFromCtx(ctx)
+	if err != nil {
+		slog.Warn("[Search]", "error", err)
+	}
+	slog.Debug("Search request", "query", in.Query, "trace-id", traceId)
+
+	var messages models.Messages
 	messages, err = s.processor.GetClosest(ctx, in.Query, SEARCH_LIMIT)
 	if err != nil {
 		err = fmt.Errorf("s.processor.GetClosest -> %w", err)

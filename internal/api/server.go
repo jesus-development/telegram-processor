@@ -8,6 +8,7 @@ import (
 	"log/slog"
 	"net"
 	"net/http"
+	"strings"
 	"telegram-processor/internal/services/processor"
 	"time"
 
@@ -38,13 +39,8 @@ func (srv *processorApiServer) ListenGRPC() error {
 		return fmt.Errorf("net.Listen -> %w", err)
 	}
 
-	// todo metadata, middlewares
-	ctx := context.Background()
-	ctx = metadata.NewIncomingContext(ctx, metadata.MD{"server-metadata": []string{"value"}})
-
-	srv.grpcServer = grpc.NewServer(grpc.UnaryInterceptor(func(ctx context.Context, req interface{}, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (resp interface{}, err error) {
-		return handler(ctx, req)
-	}))
+	// todo middlewares
+	srv.grpcServer = grpc.NewServer()
 
 	reflection.Register(srv.grpcServer)
 	pb.RegisterTelegramProcessorServiceServer(srv.grpcServer, srv)
@@ -68,7 +64,10 @@ func (srv *processorApiServer) ListenHTTPGateway() error {
 		return fmt.Errorf("grpc.NewClient -> %w", err)
 	}
 
-	gwmux := runtime.NewServeMux()
+	gwmux := runtime.NewServeMux(
+		runtime.WithIncomingHeaderMatcher(headerMatcher),
+	)
+
 	err = pb.RegisterTelegramProcessorServiceHandler(context.Background(), gwmux, conn)
 	if err != nil {
 		return fmt.Errorf("pb.RegisterTelegramProcessorServiceHandler -> %w", err)
@@ -99,4 +98,26 @@ func (srv *processorApiServer) Shutdown() {
 	if srv.grpcServer != nil {
 		srv.grpcServer.GracefulStop()
 	}
+}
+
+func headerMatcher(key string) (string, bool) {
+	switch key {
+	case "X-Trace-Id":
+		return key, true
+	default:
+		return runtime.DefaultHeaderMatcher(key)
+	}
+}
+
+func GetTraceIdFromCtx(ctx context.Context) (string, error) {
+	md, ok := metadata.FromIncomingContext(ctx)
+	if !ok {
+		return "", fmt.Errorf("metadata.FromIncomingContext -> %w", ErrGetTraceId)
+	}
+	values := md["x-trace-id"]
+	if len(values) == 0 {
+		return "", fmt.Errorf("len(values) == 0 -> %w", ErrGetTraceId)
+	}
+
+	return strings.Join(values, ""), nil
 }

@@ -1,5 +1,12 @@
 version: "3.9"
 services:
+  app:
+    build: .
+    ports:
+      - "50052:50052"
+      - "50051:50051"
+    depends_on:
+      - postgres
   postgres:
     image: ankane/pgvector:latest
     command:
@@ -42,6 +49,5 @@ services:
       - telegramdb-data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
-
 volumes:
   telegramdb-data:

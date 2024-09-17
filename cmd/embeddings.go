@@ -5,6 +5,7 @@ package cmd
 import (
 	"fmt"
 	"github.com/spf13/cobra"
+	"log/slog"
 	"telegram-processor/internal/config"
 	database "telegram-processor/internal/db"
 	"telegram-processor/internal/repository/messages"
@@ -72,7 +73,7 @@ var (
 				return fmt.Errorf("%s %s processor.GetEmbeddingPrice -> %w", ERR_PREFIX, cmd.Use, err)
 			}
 
-			fmt.Printf("Price is $%s", price.String())
+			slog.Info(fmt.Sprintf("Price is $%s", price.String()))
 
 			return nil
 		},

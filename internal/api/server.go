@@ -74,8 +74,10 @@ func (srv *processorApiServer) ListenHTTPGateway() error {
 	}
 
 	srv.httpServer = &http.Server{
-		Addr:    ":50052",
-		Handler: gwmux,
+		Addr:              ":50052",
+		Handler:           gwmux,
+		IdleTimeout:       30 * time.Second,
+		ReadHeaderTimeout: 10 * time.Second,
 	}
 
 	slog.Info("Serving http-gateway on http://0.0.0.0:50052")
@@ -89,7 +91,8 @@ func (srv *processorApiServer) ListenHTTPGateway() error {
 
 func (srv *processorApiServer) Shutdown() {
 	if srv.httpServer != nil {
-		ctx, _ := context.WithTimeout(context.Background(), HTTP_SHUTDOWN_TIMEOUT)
+		ctx, cancel := context.WithTimeout(context.Background(), HTTP_SHUTDOWN_TIMEOUT)
+		defer cancel()
 		err := srv.httpServer.Shutdown(ctx)
 		if err != nil {
 			slog.Error("Failed to shutdown http server", "error", err)

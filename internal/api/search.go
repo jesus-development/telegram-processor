@@ -15,10 +15,10 @@ func (s *processorApiServer) Search(ctx context.Context, in *pb.SearchRequest) (
 	if err != nil {
 		slog.Warn("[Search]", "error", err)
 	}
-	slog.Debug("Search request", "query", in.Query, "trace-id", traceId)
+	slog.Debug("Search request", "query", in.GetQuery(), "trace-id", traceId)
 
 	var messages models.Messages
-	messages, err = s.processor.GetClosest(ctx, in.Query, SEARCH_LIMIT)
+	messages, err = s.processor.GetClosest(ctx, in.GetQuery(), SEARCH_LIMIT)
 	if err != nil {
 		err = fmt.Errorf("s.processor.GetClosest -> %w", err)
 		slog.Error("Failed to search messages", "error", err)

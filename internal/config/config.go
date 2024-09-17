@@ -37,5 +37,4 @@ func (c *Config) LoadFromEnv() {
 	c.Openai = OpenaiConfig{
 		ApiKey: os.Getenv("OPENAI_API_KEY"),
 	}
-
 }

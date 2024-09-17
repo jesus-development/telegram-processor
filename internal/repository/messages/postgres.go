@@ -19,8 +19,14 @@ const (
 	MESSAGES_TABLENAME   = "messages"
 	EMBEDDINGS_TABLENAME = "embeddings_3large"
 
-	SQL_GET_MESSAGES_WITHOUT_VECTORS = "select m.id, m.text from messages m left join embeddings_3large emb on m.id = emb.message_id where emb.embedding is null;"
-	SQL_GET_CLOSEST                  = "with emb as (select message_id, embedding <=> $1 as similarity from embeddings_3large order by similarity limit $2) select emb.message_id, m.text, emb.similarity from emb left join messages m on emb.message_id = m.id;"
+	SQL_GET_MESSAGES_WITHOUT_VECTORS = `select m.id, m.text from messages m 
+    									left join embeddings_3large emb on m.id = emb.message_id 
+										where emb.embedding is null;`
+	SQL_GET_CLOSEST = `with emb as (select message_id, embedding <=> $1 as similarity 
+										from embeddings_3large order by similarity limit $2
+										) 
+										select emb.message_id, m.text, emb.similarity 
+										from emb left join messages m on emb.message_id = m.id;`
 )
 
 type PGMessagesRepository struct {
@@ -49,6 +55,7 @@ func (r *PGMessagesRepository) GetMessagesWithoutVectors(ctx context.Context) ([
 		}
 		messages = append(messages, msg)
 	}
+
 	return messages, nil
 }
 

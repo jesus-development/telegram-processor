@@ -9,7 +9,6 @@ import (
 	"runtime/debug"
 	"sync"
 	"telegram-processor/internal/api"
-	"telegram-processor/internal/config"
 	database "telegram-processor/internal/db"
 	"telegram-processor/internal/repository/messages"
 	"telegram-processor/internal/services/external/openai"
@@ -22,19 +21,17 @@ var serverCmd = &cobra.Command{
 	RunE: func(cmd *cobra.Command, args []string) error {
 		ctx := cmd.Context()
 
-		cfg := config.LoadConfig()
-
-		db, err := database.NewDatabase(&cfg.DB)
+		db, err := database.NewDatabase(&appConfig.DB)
 		if err != nil {
 			return fmt.Errorf("%s %s -> %w", ERR_PREFIX, cmd.Use, err)
 		}
 		messageRepo := messages.NewPGMessagesRepository(db)
 
-		openaiService := openai.NewOpenAIService(&cfg.Openai)
+		openaiService := openai.NewOpenAIService(&appConfig.Openai)
 
 		proc := processor.NewMessageProcessor(processor.WithMessagesRepository(messageRepo), processor.WithEmbeddingService(openaiService))
 
-		apiServer := api.NewServer(proc)
+		apiServer := api.NewServer(proc, &appConfig.Server)
 
 		debug.Stack()
 		var (

@@ -3,8 +3,8 @@ services:
   app:
     build: .
     ports:
-      - "50052:50052"
-      - "50051:50051"
+      - "127.0.0.1:50052:50052"
+      - "127.0.0.1:50051:50051"
     depends_on:
       - postgres
   postgres:

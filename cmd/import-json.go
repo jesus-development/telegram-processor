@@ -1,4 +1,4 @@
-//go:build !api_server
+//go:build tools
 
 package cmd
 
@@ -8,7 +8,6 @@ import (
 	"github.com/spf13/cobra"
 	"log/slog"
 	"os"
-	"telegram-processor/internal/config"
 	database "telegram-processor/internal/db"
 	"telegram-processor/internal/repository/messages"
 	"telegram-processor/internal/services/processor"
@@ -22,9 +21,7 @@ var importJsonCmd = &cobra.Command{
 	RunE: func(cmd *cobra.Command, args []string) error {
 		ctx := cmd.Context()
 
-		cfg := config.LoadConfig()
-
-		db, err := database.NewDatabase(&cfg.DB)
+		db, err := database.NewDatabase(&appConfig.DB)
 		if err != nil {
 			return fmt.Errorf("%s %s -> %w", ERR_PREFIX, cmd.Use, err)
 		}

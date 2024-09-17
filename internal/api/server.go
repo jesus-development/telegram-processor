@@ -9,6 +9,7 @@ import (
 	"net"
 	"net/http"
 	"strings"
+	"telegram-processor/internal/config"
 	"telegram-processor/internal/services/processor"
 	"time"
 
@@ -25,16 +26,18 @@ type processorApiServer struct {
 	pb.UnimplementedTelegramProcessorServiceServer
 	grpcServer *grpc.Server
 	httpServer *http.Server
+	config     *config.ServerConfig
 
 	processor processor.MessageProcessor
 }
 
-func NewServer(processor processor.MessageProcessor) *processorApiServer {
-	return &processorApiServer{processor: processor}
+func NewServer(processor processor.MessageProcessor, cfg *config.ServerConfig) *processorApiServer {
+	return &processorApiServer{processor: processor, config: cfg}
 }
 
 func (srv *processorApiServer) ListenGRPC() error {
-	lis, err := net.Listen("tcp", ":50051")
+	addr := fmt.Sprintf("%s:%d", srv.config.GRPC.Host, srv.config.GRPC.Port)
+	lis, err := net.Listen("tcp", addr)
 	if err != nil {
 		return fmt.Errorf("net.Listen -> %w", err)
 	}
@@ -45,7 +48,7 @@ func (srv *processorApiServer) ListenGRPC() error {
 	reflection.Register(srv.grpcServer)
 	pb.RegisterTelegramProcessorServiceServer(srv.grpcServer, srv)
 
-	slog.Info("Serving gRPC on 0.0.0.0:50051")
+	slog.Info("Serving gRPC on " + addr)
 	err = srv.grpcServer.Serve(lis)
 	if err != nil {
 		return fmt.Errorf("srv.grpcServer.Serve -> %w", err)
@@ -56,8 +59,10 @@ func (srv *processorApiServer) ListenGRPC() error {
 
 // ListenHTTPGateway Must be called after ListenGRPC
 func (srv *processorApiServer) ListenHTTPGateway() error {
+	addrHTTP := fmt.Sprintf("%s:%d", srv.config.HTTP.Host, srv.config.HTTP.Port)
+	addrGRPC := fmt.Sprintf("%s:%d", srv.config.GRPC.Host, srv.config.GRPC.Port)
 	conn, err := grpc.NewClient(
-		"0.0.0.0:50051",
+		addrGRPC,
 		grpc.WithTransportCredentials(insecure.NewCredentials()),
 	)
 	if err != nil {
@@ -74,13 +79,13 @@ func (srv *processorApiServer) ListenHTTPGateway() error {
 	}
 
 	srv.httpServer = &http.Server{
-		Addr:              ":50052",
+		Addr:              addrHTTP,
 		Handler:           gwmux,
 		IdleTimeout:       30 * time.Second,
 		ReadHeaderTimeout: 10 * time.Second,
 	}
 
-	slog.Info("Serving http-gateway on http://0.0.0.0:50052")
+	slog.Info("Serving http-gateway on " + addrHTTP)
 	err = srv.httpServer.ListenAndServe()
 	if err != nil {
 		return fmt.Errorf("srv.httpServer.ListenAndServe -> %w", err)

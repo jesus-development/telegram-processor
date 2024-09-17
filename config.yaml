@@ -1,0 +1,12 @@
+db:
+  host: "postgres"
+  port: 5432
+  additional: "sslmode=disable"
+  dbname: "telegramdb"
+server:
+  grpc:
+    host: "0.0.0.0"
+    port: 50051
+  http:
+    host: "0.0.0.0"
+    port: 50052

@@ -1,4 +1,4 @@
-//go:build !api_server
+//go:build tools
 
 package cmd
 
@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"github.com/spf13/cobra"
 	"log/slog"
-	"telegram-processor/internal/config"
 	database "telegram-processor/internal/db"
 	"telegram-processor/internal/repository/messages"
 	"telegram-processor/internal/services/external/openai"
@@ -24,16 +23,14 @@ var (
 		RunE: func(cmd *cobra.Command, args []string) error {
 			ctx := cmd.Context()
 
-			cfg := config.LoadConfig()
-
-			db, err := database.NewDatabase(&cfg.DB)
+			db, err := database.NewDatabase(&appConfig.DB)
 			if err != nil {
 				return fmt.Errorf("%s %s -> %w", ERR_PREFIX, cmd.Use, err)
 			}
 
 			messageRepo := messages.NewPGMessagesRepository(db)
 
-			openaiService := openai.NewOpenAIService(&cfg.Openai)
+			openaiService := openai.NewOpenAIService(&appConfig.Openai)
 
 			processor := processor.NewMessageProcessor(
 				processor.WithMessagesRepository(messageRepo),
@@ -53,15 +50,13 @@ var (
 		RunE: func(cmd *cobra.Command, args []string) error {
 			ctx := cmd.Context()
 
-			cfg := config.LoadConfig()
-
-			db, err := database.NewDatabase(&cfg.DB)
+			db, err := database.NewDatabase(&appConfig.DB)
 			if err != nil {
 				return fmt.Errorf("%s %s database.NewDatabase -> %w", ERR_PREFIX, cmd.Use, err)
 			}
 			messageRepo := messages.NewPGMessagesRepository(db)
 
-			openaiService := openai.NewOpenAIService(&cfg.Openai)
+			openaiService := openai.NewOpenAIService(&appConfig.Openai)
 
 			processor := processor.NewMessageProcessor(
 				processor.WithMessagesRepository(messageRepo),

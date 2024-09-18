@@ -13,6 +13,6 @@ RUN apk add --no-cache bash
 COPY --from=build /app/main ./
 COPY ./scripts/bash/wait-for-it.sh ./
 COPY .env ./
-COPY config.yaml ./
+COPY configs/default.yaml ./configs/
 
 ENTRYPOINT ["./wait-for-it.sh", "postgres:5432", "-t", "60", "--", "/main", "server"]

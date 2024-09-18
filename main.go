@@ -8,21 +8,13 @@ import (
 	"os/signal"
 	"syscall"
 	"telegram-processor/cmd"
-	"time"
-
-	"github.com/lmittmann/tint"
+	"telegram-processor/internal/logger"
 )
 
 func main() {
 	ctx, _ := signal.NotifyContext(context.Background(), syscall.SIGINT, syscall.SIGTERM, syscall.SIGHUP)
 
-	slog.SetDefault(slog.New(
-		tint.NewHandler(os.Stdout, &tint.Options{
-			AddSource:  true,
-			Level:      slog.LevelDebug,
-			TimeFormat: time.DateTime,
-		}),
-	))
+	logger.InitDefaulLog()
 
 	// run app
 	err := cmd.Execute(ctx)

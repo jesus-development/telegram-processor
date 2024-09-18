@@ -1,0 +1,14 @@
+db:
+  host: "localhost"
+  port: 5432
+  additional: "sslmode=disable"
+  dbname: "telegramdb"
+server:
+  grpc:
+    host: "localhost"
+    port: 50051
+  http:
+    host: "localhost"
+    port: 50052
+# debug info warn error
+log_level: "debug"

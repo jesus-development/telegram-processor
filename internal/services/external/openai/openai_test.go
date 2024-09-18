@@ -9,6 +9,7 @@ import (
 )
 
 func TestGetEmbeddingsPrice(t *testing.T) {
+	t.Parallel()
 	// 10 short words = 10 tokens
 	messages := []*models.Message{
 		{Text: "Hello"},
@@ -42,6 +43,7 @@ func TestGetEmbeddingsPrice(t *testing.T) {
 	}
 	for _, tc := range testCases {
 		t.Run(tc.title, func(t *testing.T) {
+			t.Parallel()
 			s := &openAIService{}
 			actual, err := s.GetEmbeddingsPrice(context.Background(), tc.messages, tc.tarif)
 			if !errors.Is(err, tc.err) {

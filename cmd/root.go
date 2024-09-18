@@ -9,6 +9,7 @@ import (
 	"log/slog"
 	"os"
 	"telegram-processor/internal/config"
+	"telegram-processor/internal/logger"
 )
 
 const ERR_PREFIX = "[cmd run]"
@@ -35,8 +36,8 @@ func init() {
 		config.DEFAULT_CONFIG_FILE,
 		fmt.Sprintf("config file (default is %s)", config.DEFAULT_CONFIG_FILE))
 
-	// Set up Cobra to initialize Viper before executing the command
-	cobra.OnInitialize(initConfig)
+	// Set up Cobra to initialize Viper and log level before executing the command
+	cobra.OnInitialize(initConfig, setLogLevel)
 }
 
 func initConfig() {
@@ -65,6 +66,15 @@ func initConfig() {
 	if err = viper.Unmarshal(&appConfig); err != nil {
 		slog.Error("Can't unmarshal config:", err)
 		os.Exit(1)
+	}
+}
+
+func setLogLevel() {
+	if appConfig.LogLevel == "" {
+		return
+	}
+	if err := logger.SetLogLevel(appConfig.LogLevel); err != nil {
+		slog.Error("Can't set log level:", err)
 	}
 }
 

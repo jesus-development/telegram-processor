@@ -53,6 +53,21 @@ func (mr *MockMessagesRepositoryMockRecorder) GetClosest(ctx, search, limit inte
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetClosest", reflect.TypeOf((*MockMessagesRepository)(nil).GetClosest), ctx, search, limit)
 }
 
+// GetCount mocks base method.
+func (m *MockMessagesRepository) GetCount(ctx context.Context) (int64, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetCount", ctx)
+	ret0, _ := ret[0].(int64)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetCount indicates an expected call of GetCount.
+func (mr *MockMessagesRepositoryMockRecorder) GetCount(ctx interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCount", reflect.TypeOf((*MockMessagesRepository)(nil).GetCount), ctx)
+}
+
 // GetMessagesWithoutVectors mocks base method.
 func (m *MockMessagesRepository) GetMessagesWithoutVectors(ctx context.Context) ([]*models.Message, error) {
 	m.ctrl.T.Helper()

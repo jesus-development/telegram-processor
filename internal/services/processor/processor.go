@@ -14,6 +14,7 @@ type (
 		ImportChatFromJson(ctx context.Context, chat *json.ChatJson) error
 		InsertEmbeddings(ctx context.Context, embeddings []*models.MessageEmbedding) error
 		GetClosest(ctx context.Context, search []float32, limit int64) ([]*models.Message, error)
+		GetCount(ctx context.Context) (int64, error)
 	}
 
 	EmbeddingService interface {
@@ -23,10 +24,16 @@ type (
 	}
 
 	MessageProcessor interface {
+		// import-json
 		ImportJson(ctx context.Context, reader io.Reader) error
+
+		// embeddings
 		CalculateAndSaveEmbeddings(ctx context.Context) error
 		GetEmbeddingPrice(ctx context.Context, tarif models.EmbeddingTarif) (decimal.Decimal, error)
 		GetClosest(ctx context.Context, search string, limit int64) ([]*models.Message, error)
+
+		// messages
+		GetCount(ctx context.Context) (int64, error)
 	}
 
 	messageProcessor struct {

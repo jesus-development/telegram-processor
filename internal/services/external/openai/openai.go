@@ -34,6 +34,10 @@ func NewOpenAIService(cfg *config.OpenaiConfig) *openAIService {
 }
 
 func (s *openAIService) GetMessageEmbeddings(ctx context.Context, messages []*models.Message) ([]*models.MessageEmbedding, error) {
+	if len(messages) == 0 {
+		return make([]*models.MessageEmbedding, 0), nil
+	}
+
 	input := make([]string, len(messages))
 	for i, message := range messages {
 		input[i] = message.Text

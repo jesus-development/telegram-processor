@@ -40,6 +40,7 @@ func init() {
 	cobra.OnInitialize(initConfig, setLogLevel)
 }
 
+//nolint:errcheck
 func initConfig() {
 	if cfgFile != "" {
 		viper.SetConfigFile(cfgFile)
@@ -59,12 +60,12 @@ func initConfig() {
 	viper.BindEnv("openai.apikey", "OPENAI_API_KEY")
 
 	if err = viper.ReadInConfig(); err != nil {
-		slog.Error("Can't read config:", err)
+		slog.Error("Can't read config:", "error", err)
 		os.Exit(1)
 	}
 
 	if err = viper.Unmarshal(&appConfig); err != nil {
-		slog.Error("Can't unmarshal config:", err)
+		slog.Error("Can't unmarshal config:", "error", err)
 		os.Exit(1)
 	}
 }
@@ -74,7 +75,7 @@ func setLogLevel() {
 		return
 	}
 	if err := logger.SetLogLevel(appConfig.LogLevel); err != nil {
-		slog.Error("Can't set log level:", err)
+		slog.Error("Can't set log level:", "error", err)
 	}
 }
 

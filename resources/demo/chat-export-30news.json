@@ -1,0 +1,634 @@
+{
+  "type": "doesn't matter",
+  "id": 155888123,
+  "messages": [
+    {
+      "id": 1182398,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "HW 18.11 English Vocabulary in Use (air travel).pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Новая инициатива правительства по снижению налогов вызвала волну обсуждений среди граждан. Эксперты прогнозируют изменения в экономике страны."
+        }
+      ]
+    },
+    {
+      "id": 182399,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "lesson materials 23.11.pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Учёные создали материал, способный восстанавливаться после повреждений. Эта инновация обещает революцию в производстве бытовой техники."
+        }
+      ]
+    },
+    {
+      "id": 182400,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "HW 1.pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Осенью 2024 года в моду возвращаются яркие цвета и ретро-силуэты. Дизайнеры вдохновляются эстетикой 70-х годов, создавая смелые образы."
+        }
+      ]
+    },
+    {
+      "id": 182401,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "HW WB 4A.pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Попробуйте приготовить крем-суп из тыквы с добавлением карри и кокосового молока. Это блюдо станет отличным выбором для уютного осеннего ужина."
+        }
+      ]
+    },
+    {
+      "id": 182402,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "lesson materials 25.11.pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Белые медведи стали символом борьбы за сохранение арктической экосистемы. Изменение климата угрожает их выживанию в дикой природе."
+        }
+      ]
+    },
+    {
+      "id": 182403,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "lesson materials 25.11 (перетянутый).pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Мария завершила марафон с личным рекордом в 3 часа 45 минут. Регулярные тренировки помогли ей достичь этой цели."
+        }
+      ]
+    },
+    {
+      "id": 182404,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "HW 25.11 (future forms).pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Новый альбом популярной инди-группы сочетает электронные звуки с живыми инструментами. Критики называют его одним из лучших релизов года."
+        }
+      ]
+    },
+    {
+      "id": 182405,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "lesson materials 30.11.pdf",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Недавно открытая экзопланета имеет потенциально пригодные для жизни условия. Астрономы продолжают изучать её атмосферу."
+        }
+      ]
+    },
+    {
+      "id": 182406,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "HW 30.11 (1).pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Практика благодарности помогает улучшить эмоциональное состояние и снизить уровень стресса. Ежедневные записи благодарности становятся всё более популярными."
+        }
+      ]
+    },
+    {
+      "id": 182407,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "HW 30.11 (2).pdf",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "В 19 веке промышленная революция изменила облик городов и жизнь людей. Массовое производство и урбанизация привели к социальным и экономическим переменам."
+        }
+      ]
+    },
+    {
+      "id": 182408,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "2.12 (revision, future forms).pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Власти обсуждают введение нового закона, направленного на борьбу с киберпреступностью. Законопроект предполагает ужесточение наказаний за хакерские атаки."
+        }
+      ]
+    },
+    {
+      "id": 182409,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "lesson materials 2.12.pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Разработчики представили роботизированную руку, способную выполнять сложные хирургические операции с минимальным участием человека. Технология уже прошла первые успешные испытания."
+        }
+      ]
+    },
+    {
+      "id": 182410,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "HW 2.12 .pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Коллекции весна/лето 2024 привлекают внимание сочетанием натуральных тканей и эклектичных аксессуаров. Экологичность снова в тренде."
+        }
+      ]
+    },
+    {
+      "id": 182411,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "lesson materials 7.12.pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Новый тренд в кулинарии — использование альтернативных источников белка, таких как насекомые. Рестораны предлагают оригинальные блюда с использованием сверчков и личинок."
+        }
+      ]
+    },
+    {
+      "id": 182412,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "lesson materials 2.12 (перетянутый).pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Биологи обнаружили новый вид глубоководных рыб, которые светятся в темноте. Это открытие помогает лучше понять экосистему океанских глубин."
+        }
+      ]
+    },
+    {
+      "id": 182413,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "HW 7.12.pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Секция йоги на свежем воздухе привлекает всё больше любителей активного отдыха. Регулярные занятия улучшают гибкость и способствуют душевному равновесию."
+        }
+      ]
+    },
+    {
+      "id": 182414,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "Essential Grammar in Use 4th Ed. (Present Perfect).pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Гитарист-виртуоз выпустил сингл, вдохновленный этнической музыкой Южной Америки. Композиция быстро завоевала популярность благодаря своему уникальному звучанию."
+        }
+      ]
+    },
+    {
+      "id": 182415,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "lesson materials 9.12.pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "НАСА объявила о планах на новую миссию к Юпитеру. Цель — изучить ледяные спутники планеты и выяснить, есть ли там условия для жизни."
+        }
+      ]
+    },
+    {
+      "id": 182416,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "Essential Grammar in Use 4th Ed. (Present Perfect).pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Ученые доказали, что медитация способствует улучшению памяти и концентрации. Регулярная практика помогает лучше справляться с ежедневным стрессом."
+        }
+      ]
+    },
+    {
+      "id": 182417,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "lesson materials 14.12.pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Археологи нашли древний город, затопленный в результате землетрясения несколько тысяч лет назад. Раскопки продолжаются, обещая новые открытия о жизни древних цивилизаций."
+        }
+      ]
+    },
+    {
+      "id": 182418,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "HW 14.12.pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "В ответ на рост социального неравенства введены новые меры поддержки малообеспеченных семей. Ожидается, что они снизят уровень бедности в стране."
+        }
+      ]
+    },
+    {
+      "id": 182419,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "lesson materials 17.12 .pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Учёные разработали инновационное биотопливо, которое может полностью заменить традиционные источники энергии. Этот прорыв обещает сделать транспорт экологически безопасным."
+        }
+      ]
+    },
+    {
+      "id": 182420,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "lesson materials (comparatives).pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "В этом сезоне в тренде минимализм: простые линии, базовые цвета и отсутствие лишних деталей. Стиль подходит как для повседневной жизни, так и для официальных мероприятий."
+        }
+      ]
+    },
+    {
+      "id": 182421,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "HW (-ing:-ed adj).pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Веганские десерты становятся всё популярнее, благодаря их полезности и разнообразию вкусов. Кокосовый йогурт с ягодами — один из самых востребованных рецептов."
+        }
+      ]
+    },
+    {
+      "id": 182422,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "HW English Grammar in Use (85,86).pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "В национальном парке успешно реализована программа по восстановлению популяции исчезающих видов. Число рысей удвоилось за последние пять лет."
+        }
+      ]
+    },
+    {
+      "id": 182423,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "21.12 lesson materials (comparatives).pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Зимний туризм набирает обороты, особенно популярны лыжные туры и катание на сноуборде. Любители активного отдыха выбирают горы как место для отпуска."
+        }
+      ]
+    },
+    {
+      "id": 182424,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "comparatives.pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Популярный рэпер выпустил альбом, в котором объединил современный бит с классическими инструментами. Альбом получил признание за свою оригинальность и глубину текстов."
+        }
+      ]
+    },
+    {
+      "id": 182425,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "HW 21.12.pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Астрономы наблюдали редкое космическое явление — столкновение двух нейтронных звёзд. Это событие позволяет исследовать происхождение тяжёлых элементов во Вселенной."
+        }
+      ]
+    },
+    {
+      "id": 182426,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "lesson materials 23.12.pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Исследования показывают, что регулярная физическая активность способствует улучшению психического здоровья. Спорт помогает бороться с депрессией и тревожностью."
+        }
+      ]
+    },
+    {
+      "id": 182427,
+      "type": "message",
+      "date": "2021-02-02T09:31:03",
+      "date_unixtime": "1612254663",
+      "from": "И",
+      "from_id": "user12345",
+      "forwarded_from": "Antonio Banderas",
+      "saved_from": "Chatname",
+      "file": "(File not included. Change data exporting settings to download.)",
+      "file_name": "HW 23.12.pdf",
+      "thumbnail": "(File not included. Change data exporting settings to download.)",
+      "mime_type": "application/pdf",
+      "text": "This field doesn't matter",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Новая книга о древних цивилизациях раскрывает малоизвестные аспекты культуры Майя. Автор исследует их достижения в астрономии и математике."
+        }
+      ]
+    }
+  ]
+}

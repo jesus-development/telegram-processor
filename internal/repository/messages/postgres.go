@@ -22,11 +22,15 @@ const (
 	SQL_GET_MESSAGES_WITHOUT_VECTORS = `select m.id, m.text from messages m 
     									left join embeddings_3large emb on m.id = emb.message_id 
 										where emb.embedding is null;`
+
 	SQL_GET_CLOSEST = `with emb as (select message_id, embedding <=> $1 as similarity 
 										from embeddings_3large order by similarity limit $2
 										) 
 										select emb.message_id, m.text, emb.similarity 
-										from emb left join messages m on emb.message_id = m.id;`
+										from emb left join messages m on emb.message_id = m.id
+										order by similarity;`
+
+	SQL_GET_COUNT = `select count(id) from messages;`
 )
 
 type PGMessagesRepository struct {
@@ -181,4 +185,13 @@ func (r *PGMessagesRepository) GetClosest(ctx context.Context, search []float32,
 		messages = append(messages, msg)
 	}
 	return messages, nil
+}
+
+func (r *PGMessagesRepository) GetCount(ctx context.Context) (int64, error) {
+	var count int64
+	err := r.db.QueryRowContext(ctx, SQL_GET_COUNT).Scan(&count)
+	if err != nil {
+		return 0, fmt.Errorf("r.db.QueryRowContext -> %w", err)
+	}
+	return count, nil
 }

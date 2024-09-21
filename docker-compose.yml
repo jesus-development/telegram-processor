@@ -1,12 +1,20 @@
-version: "3.9"
 services:
-  app:
-    build: .
+  server:
+    build:
+      context: .
+      dockerfile: server.Dockerfile
     ports:
       - "127.0.0.1:50052:50052"
       - "127.0.0.1:50051:50051"
     depends_on:
       - postgres
+  demo:
+    container_name: telegram-processor_demo
+    build:
+      context: .
+      dockerfile: demo.Dockerfile
+    tty: true
+#    command: tail -F anything
   postgres:
     image: pgvector/pgvector:pg16
     command:

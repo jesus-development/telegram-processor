@@ -13,11 +13,11 @@ type (
 	}
 )
 
-func NewFakeOpenAIService(cfg *config.OpenaiConfig) *fakeOpenAIService {
+func NewFakeOpenAIService(_ *config.OpenaiConfig) *fakeOpenAIService {
 	return &fakeOpenAIService{}
 }
 
-func (s *fakeOpenAIService) GetMessageEmbeddings(ctx context.Context, messages []*models.Message) ([]*models.MessageEmbedding, error) {
+func (s *fakeOpenAIService) GetMessageEmbeddings(_ context.Context, messages []*models.Message) ([]*models.MessageEmbedding, error) {
 	messageEmbeddings := make([]*models.MessageEmbedding, 0, len(messages))
 	for _, msg := range messages {
 		messageEmbedding := &models.MessageEmbedding{
@@ -30,7 +30,7 @@ func (s *fakeOpenAIService) GetMessageEmbeddings(ctx context.Context, messages [
 	return messageEmbeddings, nil
 }
 
-func (s *fakeOpenAIService) GetEmbedding(ctx context.Context, text string) ([]float32, error) {
+func (s *fakeOpenAIService) GetEmbedding(_ context.Context, _ string) ([]float32, error) {
 	return randomFloat32Slice(MAX_EMBEDDINGS_DIMENSIONS), nil
 }
 

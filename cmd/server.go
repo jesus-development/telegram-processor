@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"github.com/spf13/cobra"
 	"log/slog"
-	"runtime/debug"
 	"sync"
 	"telegram-processor/internal/api"
 	database "telegram-processor/internal/db"
@@ -27,13 +26,19 @@ var serverCmd = &cobra.Command{
 		}
 		messageRepo := messages.NewPGMessagesRepository(db)
 
-		openaiService := openai.NewOpenAIService(&appConfig.Openai)
+		var openaiService processor.EmbeddingService
+		// todo (appConfig.Openai.ApiKey == "") will be removed soon
+		if appConfig.Openai.ApiKey == "" || appConfig.Openai.IsFake {
+			slog.Warn("Openai API key is not set. Embeddings and search result will be random.")
+			openaiService = openai.NewFakeOpenAIService(&appConfig.Openai)
+		} else {
+			openaiService = openai.NewOpenAIService(&appConfig.Openai)
+		}
 
 		proc := processor.NewMessageProcessor(processor.WithMessagesRepository(messageRepo), processor.WithEmbeddingService(openaiService))
 
 		apiServer := api.NewServer(proc, &appConfig.Server)
 
-		debug.Stack()
 		var (
 			chErr = make(chan error, 2)
 			wg    = &sync.WaitGroup{}

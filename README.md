@@ -1,3 +1,5 @@
+**[EN]** [[RU]](doc/README_ru.md)
+
 # Telegram-processor
 
 Research tool for semantic search using Telegram messages
@@ -6,8 +8,29 @@ Research tool for semantic search using Telegram messages
 
 ## Getting started
 
-### Build
+### Clone
 
+https
+```bash
+git clone https://github.com/jesus-development/telegram-processor.git && cd telegram-processor
+```
+
+or ssh
+```bash
+git clone git@github.com:jesus-development/telegram-processor.git && cd telegram-processor
+```
+
+### Init
+
+#### Docker (recommended)
+
+```bash
+cp -n .env.example .env
+```
+
+#### Locally
+
+You need go version 1.22
 ```bash
 make build-demo
 ```
@@ -26,8 +49,9 @@ Test containers use external ports:
 
 If they already in use:
 
-- Change them in both config files: `configs/local.yaml` and `configs/default.yaml`
-- And change them in `docker-compose.yml` too.
+- Change them in `docker-compose.yml`
+- If you want to run demo locally, also change `db.port` in `configs/local.yaml`
+
 
 ### Run containers with postgres and api server
 
@@ -37,16 +61,31 @@ docker-compose up -d
 
 ### Run demo
 
+#### Docker (recommended)
+
+- enter demo container
+```bash
+docker exec -it telegram-processor_demo bash
+```
+
+- run demo  
+  For the first run, use `--import-db` for import test messages from `resources/demo/chat-export-30news.json`.
+```bash
+./telegram-processor demo --import-db
+```
+
+#### Locally
+
 For the first run, use `--import-db` for import test messages from `resources/demo/chat-export-30news.json`.
 
 ```bash
-./telegram-processor demo --import-db
+./telegram-processor demo -c configs/local.yaml --import-db
 ```
 
 ### Send API request directly
 
 ```bash
-curl --location '127.0.0.1:50052/api/search?query=asdf' \
+curl --location '127.0.0.1:50052/api/search?query=asdf'
 ```
 
 ### Stop containers

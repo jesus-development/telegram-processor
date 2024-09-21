@@ -65,7 +65,7 @@ func (s *openAIService) GetMessageEmbeddings(ctx context.Context, messages []*mo
 	return messageEmbeddings, nil
 }
 
-func (s *openAIService) GetEmbeddingsPrice(ctx context.Context, messages []*models.Message, tarif models.EmbeddingTarif) (decimal.Decimal, error) {
+func (s *openAIService) GetEmbeddingsPrice(_ context.Context, messages []*models.Message, tarif models.EmbeddingTarif) (decimal.Decimal, error) {
 	if tarif.Divider < 1 {
 		return decimal.Zero, fmt.Errorf("%w: bad divider", ErrInvalidTarif)
 	}

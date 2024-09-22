@@ -63,15 +63,9 @@ docker-compose up -d
 
 #### Docker (recommended)
 
-- enter demo container
-```bash
-docker exec -it telegram-processor_demo bash
-```
-
-- run demo  
   For the first run, use `--import-db` for import test messages from `resources/demo/chat-export-30news.json`.
 ```bash
-./telegram-processor demo --import-db
+docker exec -it telegram-processor_demo ./telegram-processor demo --import-db
 ```
 
 #### Locally

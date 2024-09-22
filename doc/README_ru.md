@@ -62,15 +62,9 @@ docker-compose up -d
 
 #### Docker (рекомендуется)
 
-- подключиться к контейнеру
-```bash
-docker exec -it telegram-processor_demo bash
-```
-
-- запустить demo  
   При первом запуске используйте флаг `--import-db` чтобы импортировать тестовые 30 сообщений из `resources/demo/chat-export-30news.json`.
 ```bash
-./telegram-processor demo --import-db
+docker exec -it telegram-processor_demo ./telegram-processor demo --import-db
 ```
 
 #### Локально
